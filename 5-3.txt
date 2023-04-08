@@ -1,0 +1,33 @@
+3.
+a)
+
+?- stepmother_of(camilla, louis).
+no.
+
+
+b)
+
+?- deceased(Y), child_of(X, Z), child_of(Z, Y), write(X), nl, fail.
+george
+charlotte
+louis
+archie
+lilibet
+false.
+
+
+c)
+
+?- stepmother_of(camilla, X), senior_royal(X).
+X = william ;
+false.
+
+
+d)
+
+?- child_of(william, X), child_of(harry, X).
+X = charles ;
+X = diana.
+
+
+e)
