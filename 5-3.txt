@@ -31,3 +31,9 @@ X = diana.
 
 
 e)
+
+?- grandmother_of(X, Y), male(Y), write(Y), nl, fail.
+george
+louis
+archie
+false.

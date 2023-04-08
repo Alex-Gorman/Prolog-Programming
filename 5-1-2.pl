@@ -52,27 +52,25 @@ senior_royal(charlotte).
 senior_royal(louis).
 
 /* 2 a) */
-uncle_of(X, Y) :- male(X), child_of(Y, Z), child_of(Z, A), child_of(Z, A), !.
+uncle_of(X, Y) :- male(X), child_of(Y, Z), child_of(Z, A), child_of(Z, A).
 
 /* 2 b) */
-/* grandmother_of(X, Y) :- female(X), child_of(Y, Z), child_of(Z, X), !. */
 grandmother_of(X, Y) :- female(X), child_of(Y, Z), child_of(Z, X).
 
 /* 2 c) */
-grandson_of(X, Y) :- male(X), child_of(X, Z), child_of(Z, Y), !.
+grandson_of(X, Y) :- male(X), child_of(X, Z), child_of(Z, Y).
 
 /* 2 d) */
-parent_of(X, Y) :- child_of(Y, X), !.
+parent_of(X, Y) :- child_of(Y, X).
 
 /* 2 e) */
-mother_of(X, Y) :- child_of(Y, X), female(X), !.
+mother_of(X, Y) :- child_of(Y, X), female(X).
 
 /* 2 f) */
-/* stepmother_of(X, Y) :- female(X), ever_married_to(X, Z), child_of(Y, Z), !.*/
 stepmother_of(X, Y) :- female(X), ever_married_to(X, Z), child_of(Y, Z).
 
 /* 2 g) */
-son_of(X, Y) :- child_of(X, Y), male(X), !.
+son_of(X, Y) :- child_of(X, Y), male(X).
 
 
 
