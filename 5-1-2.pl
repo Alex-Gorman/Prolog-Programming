@@ -55,7 +55,8 @@ senior_royal(louis).
 uncle_of(X, Y) :- male(X), child_of(Y, Z), child_of(Z, A), child_of(Z, A), !.
 
 /* 2 b) */
-grandmother_of(X, Y) :- female(X), child_of(Y, Z), child_of(Z, X), !.
+/* grandmother_of(X, Y) :- female(X), child_of(Y, Z), child_of(Z, X), !. */
+grandmother_of(X, Y) :- female(X), child_of(Y, Z), child_of(Z, X).
 
 /* 2 c) */
 grandson_of(X, Y) :- male(X), child_of(X, Z), child_of(Z, Y), !.
@@ -72,9 +73,6 @@ stepmother_of(X, Y) :- female(X), ever_married_to(X, Z), child_of(Y, Z).
 
 /* 2 g) */
 son_of(X, Y) :- child_of(X, Y), male(X), !.
-
-/* Helper functions */
-grandchildren_of(X, Y) :- child_of(X, Z), child_of(Z, Y).
 
 
 
